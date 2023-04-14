@@ -5,5 +5,5 @@ Web-API for [owo.vc](https://owo.vc) which is an simple link obfuscator that all
 ```bash
 source owo.sh
 
-shorten_url "link" "generator" "true" "false"
+shorten_url "link" "generator" "metadata"
 ```
