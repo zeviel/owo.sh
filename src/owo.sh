@@ -1,6 +1,7 @@
 #!/bin/bash
 
 api="https://owo.vc/api/v2"
+user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
 
 function shorten_url() {
 	# 1 - link: (string): <link>
@@ -8,7 +9,7 @@ function shorten_url() {
 	# 3 - metadata: (string): <metadata - default: OWOIFY>
 	curl --request POST \
 		--url "$api/link" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "accept: application/json" \
 		--header "content-type: application/json" \
 		--data '{
@@ -21,7 +22,7 @@ function shorten_url() {
 function get_url_info() {
 	curl --request GET \
 		--url "$api/link/$1" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "accept: application/json" \
 		--header "content-type: application/json"
 }
