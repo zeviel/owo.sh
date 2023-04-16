@@ -3,7 +3,6 @@ Web-API for [owo.vc](https://owo.vc) which is an simple link obfuscator that all
 
 ## Example
 ```bash
-source owo.sh
-
+source ./owo.sh
 shorten_url "link" "generator" "metadata"
 ```
